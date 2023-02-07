@@ -1,0 +1,15 @@
+@import '../../style.scss';
+
+.home {
+    @include themify($themes) {
+        padding: 20px 40px;
+        background-color: themed('bgSoft');
+        color: themed('textColor');
+        width: 1050px;
+        max-width: 100%;
+        overflow: hidden;
+        @include mobile {
+            padding: 20px 10px;
+        }
+    }
+    }

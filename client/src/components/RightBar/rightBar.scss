@@ -1,0 +1,94 @@
+@import '../../style.scss';
+
+.rightBar {
+    @include themify($themes) {
+    flex:2;
+    position: sticky;
+    top:70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    color:themed('textColor');
+        background-color: themed('bgSoft');
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include mobile {
+        display: none ;
+    }
+
+    .container {
+        
+        .item {
+            -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            padding: 20px;
+            margin-top: 20px;
+            background-color: themed("bg");
+           
+            span {
+              color:themed('textColor')
+            }
+            .user {
+                margin: 20px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                .userInfo {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    position: relative;
+                    p {
+                        color:themed('textColor');
+                        margin: 0;
+                    }
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                    .online {
+                        position: absolute;
+                        top:0;
+                        left:20px;
+                        background-color: greenyellow;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                    }
+                    span {
+
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    gap:20px;
+                    
+                    button {
+                        outline: none;
+                        border: none;
+                        color:white;
+                        padding: 4px 5px;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        &:first-child {
+                            background-color: #5271ff;
+                          }
+            
+                          &:last-child {
+                            background-color: #f0544f;
+                          }
+                    }
+
+                   
+                }
+            }
+        }
+    }
+}
+}
